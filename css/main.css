@@ -28,12 +28,16 @@ main {
   width: 100%;
 }
 
+main .huddle__icon {
+  width: 250px;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 7rem;
 }
 
 .container .huddle__hero {
@@ -54,6 +58,7 @@ main {
 .container .huddle__content .content__h1 {
   color: white;
   line-height: 1.5;
+  padding-right: 5rem;
   font-size: clamp(1.5rem, 10vw, 2.5rem);
   font-family: var(--poppins-font-family);
 }
@@ -65,17 +70,20 @@ main {
   margin-top: 1rem;
   padding-right: 1rem;
   font-weight: 400;
+  font-size: 1.1em;
 }
 
 .container .huddle__content .content__button {
   background-color: white;
   border-radius: 3rem;
   text-decoration: none;
-  padding: 1rem 3rem;
+  padding: .8rem 4rem;
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  color: var(--Violet);
   font-family: var(--opens-font-family);
   font-weight: 400;
+  font-size: 1.1em;
   -webkit-box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
           box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
   -webkit-transition: .1s linear;
@@ -94,11 +102,21 @@ main {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin-right: 5rem;
-  margin-bottom: 3rem;
+  margin-right: 7rem;
+  margin-bottom: 2.5rem;
 }
 
-.huddle__socmed .socmed--icon {
+.huddle__socmed .socmed__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.huddle__socmed .socmed__list .socmed__items {
+  list-style-type: none;
+}
+
+.huddle__socmed .socmed__list .socmed__items .socmed__icon {
   height: 40px;
   width: 40px;
   color: white;
@@ -118,17 +136,32 @@ main {
   transition: .1s linear;
 }
 
-.huddle__socmed .socmed--icon:hover {
+.huddle__socmed .socmed__list .socmed__items .socmed__icon:hover {
   border: 1px solid magenta;
 }
 
-.huddle__socmed .socmed--icon:hover .socmed--icon--size path {
+.huddle__socmed .socmed__list .socmed__items .socmed__icon:hover .socmed__icon--size path {
   fill: magenta;
 }
 
-.huddle__socmed .socmed--icon--size {
+.huddle__socmed .socmed__list .socmed__items .socmed__icon--size {
   height: 20px;
   width: 20px;
+}
+
+@media only screen and (max-width: 1440px) {
+  main .huddle__icon {
+    width: 180px;
+  }
+  .container {
+    margin-top: 4.7rem;
+  }
+  .container .huddle__hero {
+    width: 60%;
+  }
+  .container .huddle__content {
+    margin: 0 0 0 3rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -146,14 +179,12 @@ main {
     display: flex;
     position: relative;
     top: 13rem;
+    left: 50%;
     text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
   }
-  .huddle__socmed .socmed--icon {
+  .huddle__socmed .socmed__icon {
     margin-bottom: 5rem;
   }
   .container {
@@ -172,6 +203,9 @@ main {
   }
   .container .huddle__content .content__button {
     padding: 1rem 7rem;
+  }
+  .container .huddle__content .content__h1 {
+    padding: 0;
   }
 }
 
@@ -197,13 +231,21 @@ main {
   }
   .huddle__socmed {
     top: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateX(-45%);
+            transform: translateX(-45%);
   }
-  .huddle__socmed .socmed--icon {
+  .huddle__socmed .socmed__icon {
     height: 30px;
     width: 30px;
     margin-bottom: 3rem;
   }
-  .huddle__socmed .socmed--icon--size {
+  .huddle__socmed .socmed__icon--size {
     height: 15px;
     width: 15px;
   }
